@@ -1,0 +1,34 @@
+{
+  "name": "buyshoes",
+  "version": "1.0.0",
+  "description": "Startkit For Buyshoes Shopping Cart",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "makeJs": "webpack --watch --progress -d js/app.jsx build/app.js --module-bind \"jsx=babel\" --module-bind \"js=babel\"",
+    "miniJs": "webpack --watch --progress -p js/app.jsx bundle/app.js --module-bind \"jsx=babel\" --module-bind \"js=babel\"",
+    "start": "browser-sync start --server --files=\"index.html,bundle/app.css,js/app.js,build/app.js\"",
+    "css": "postcss --watch --use autoprefixer --use postcss-import css/app.css --output bundle/app.css"
+  },
+  "author": "Howard Yeh",
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "^3.0.3",
+    "perfect-scrollbar": "^0.6.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.0.2",
+    "babel": "^6.5.1",
+    "babel-cli": "^6.5.1",
+    "babel-core": "^5.8.35",
+    "babel-loader": "^5.4.0",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.5.0",
+    "browser-sync": "^2.9.3",
+    "clean-css": "^3.4.3",
+    "postcss-cli": "^2.1.0",
+    "postcss-import": "^7.0.0",
+    "react": "^0.13.3",
+    "webpack": "^1.12.2"
+  }
+}
